@@ -16,7 +16,7 @@ const Nav = ({ isLoggedIn, username }) => {
 
   return (
     <HeaderContainer>
-      <HomeIcon onClick={() => navigate('/')}>&#x1F3E0;</HomeIcon>
+      <HomeIcon onClick={() => navigate('/main')}>&#x1F3E0;</HomeIcon>
       <div>
         {!isLoggedIn ? (
           <>
