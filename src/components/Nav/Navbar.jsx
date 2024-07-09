@@ -17,7 +17,7 @@ const Nav = ({ isLoggedIn }) => {
         ) : (
           <>
             <NavButton onClick={() => navigate('/shop')}>Shop</NavButton>
-            <NavButton onClick={() => navigate('/signout')}>Sign out</NavButton>
+            <NavButton onClick={() => navigate('/')}>Sign out</NavButton>
           </>
         )}
       </div>

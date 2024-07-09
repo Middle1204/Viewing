@@ -9,6 +9,10 @@ export const HeaderContainer = styled.div`
   align-items: center;
   padding: 0 15px;
   box-sizing: border-box;
+  position: fixed; /* 위치를 고정 */
+  top: 0; /* 화면 상단에 붙임 */
+  left: 0; /* 화면 좌측에 붙임 */
+  z-index: 10; /* 다른 요소들보다 앞에 위치 */
 `;
 
 export const NavButton = styled.button`

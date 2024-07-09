@@ -1,9 +1,8 @@
 import styled from 'styled-components';
 
 export const ShopContainer = styled.div`
+  margin-top: 50px;
   padding: 20px;
-  width: calc(100% - 250px); /* 사이드바 너비만큼 뺀다 */
-  margin-left: 250px; /* 사이드바 너비만큼 마진을 준다 */
   box-sizing: border-box;
 `;
 
@@ -29,4 +28,20 @@ export const ProductItem = styled.div`
   border: 1px solid #ddd;
   border-radius: 5px;
   background-color: #f9f9f9;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+`;
+
+export const BuyButton = styled.button`
+  background-color: #4F910D;
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  border-radius: 5px;
+  cursor: pointer;
+
+  &:hover {
+    background-color: #367f07;
+  }
 `;

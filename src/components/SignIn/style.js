@@ -6,6 +6,7 @@ export const SignInContainer = styled.div`
   align-items: center;
   padding: 20px;
   box-sizing: border-box;
+  margin-top: 50px;
 `;
 
 export const Title = styled.h1`

@@ -1,21 +1,36 @@
-import React from 'react';
+import React, { useState } from 'react';
 import Nav from '../Nav/Navbar';
-import { ShopContainer, Title, PointDisplay, ProductList, ProductItem } from './style';
+import { ShopContainer, Title, PointDisplay, ProductList, ProductItem, BuyButton } from './style';
 
 const Shop = () => {
-  const points = 120; // 예시 포인트 값
+  const [points, setPoints] = useState(120); // 예시 포인트 값
+  const [products] = useState([
+    { id: 1, name: 'Product 1', price: 50 },
+    { id: 2, name: 'Product 2', price: 70 },
+    { id: 3, name: 'Product 3', price: 100 },
+  ]);
+
+  const handleBuy = (price) => {
+    if (points >= price) {
+      setPoints(points - price);
+      alert('Purchase successful!');
+    } else {
+      alert('Not enough points!');
+    }
+  };
 
   return (
     <ShopContainer>
-      <Nav
-     isLoggedIn={true} />
+      <Nav isLoggedIn={true} />
       <Title>Shop</Title>
       <PointDisplay>{points}P</PointDisplay>
       <ProductList>
-        {/* 예시 상품 데이터 */}
-        <ProductItem>Product 1 - 50P</ProductItem>
-        <ProductItem>Product 2 - 70P</ProductItem>
-        <ProductItem>Product 3 - 100P</ProductItem>
+        {products.map(product => (
+          <ProductItem key={product.id}>
+            {product.name} - {product.price}P
+            <BuyButton onClick={() => handleBuy(product.price)}>Buy</BuyButton>
+          </ProductItem>
+        ))}
       </ProductList>
     </ShopContainer>
   );
