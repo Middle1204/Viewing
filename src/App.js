@@ -6,6 +6,7 @@ import MainAfter from './components/MainAfter/MainAfter';
 import Register from './components/Register/Register';
 import SignIn from './components/SignIn/SignIn';
 import Shop from './components/shop/shop';
+import Account from './components/Account/Account';
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
         <Route path="/register" element={<Register />} />
         <Route path="/signin" element={<SignIn />} />
         <Route path="/shop" element={<Shop />} />
+        <Route path="/account" element={<Account />} />
       </Routes>
     </Router>
   );

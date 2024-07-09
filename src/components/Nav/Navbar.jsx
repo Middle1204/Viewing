@@ -1,9 +1,18 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import { HeaderContainer, NavButton, HomeIcon } from './style';
+import { HeaderContainer, NavButton, HomeIcon, UserName, DropdownMenu, DropdownItem } from './style';
 
-const Nav = ({ isLoggedIn }) => {
+const Nav = ({ isLoggedIn, username }) => {
   const navigate = useNavigate();
+  const [showDropdown, setShowDropdown] = useState(false);
+
+  const handleDropdownToggle = () => {
+    setShowDropdown(!showDropdown);
+  };
+
+  const handleSignOut = () => {
+    navigate('/');
+  };
 
   return (
     <HeaderContainer>
@@ -17,7 +26,13 @@ const Nav = ({ isLoggedIn }) => {
         ) : (
           <>
             <NavButton onClick={() => navigate('/shop')}>Shop</NavButton>
-            <NavButton onClick={() => navigate('/')}>Sign out</NavButton>
+            <UserName onClick={handleDropdownToggle}>{username}</UserName>
+            {showDropdown && (
+              <DropdownMenu>
+                <DropdownItem onClick={() => navigate('/account')}>My account</DropdownItem>
+                <DropdownItem onClick={handleSignOut}>Sign out</DropdownItem>
+              </DropdownMenu>
+            )}
           </>
         )}
       </div>

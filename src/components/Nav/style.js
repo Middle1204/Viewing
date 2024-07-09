@@ -32,3 +32,35 @@ export const HomeIcon = styled.span`
   font-size: 24px;
   cursor: pointer;
 `;
+
+export const UserName = styled.span`
+  color: white;
+  font-size: 16px;
+  margin-left: 10px;
+  cursor: pointer;
+
+  &:hover {
+    text-decoration: underline;
+  }
+`;
+
+export const DropdownMenu = styled.div`
+  position: absolute;
+  top: 50px;
+  right: 15px;
+  background-color: white;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  z-index: 20;
+`;
+
+export const DropdownItem = styled.div`
+  padding: 10px;
+  cursor: pointer;
+  color: black;
+
+  &:hover {
+    background-color: #f5f5f5;
+  }
+`;

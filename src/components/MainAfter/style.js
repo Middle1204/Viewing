@@ -34,38 +34,10 @@ export const Overlay = styled.div`
   z-index: -1;
 `;
 
-export const UserInfo = styled.div`
-  margin: 20px;
-  font-size: 24px;
-  color: white;
-  z-index: 1;
-  font-weight: 900;
-`;
-
-export const PointRectangle = styled.div`
-  margin: 20px;
-  width: 240px;
-  height: 280px;
-  border-radius: 300px;
-  background-color: rgba(255, 255, 255, 0.2);
-  color: black;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 72px;
-  font-weight: bold;
-  -webkit-text-stroke: 2px white;
-  text-shadow: -2px 2px 4px white;
-  z-index: 1;
-`;
-
 export const IconContainer = styled.div`
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
-  position: absolute;
-  top: 70px; /* NavBar 아래에 위치 */
-  left: 20px;
+  align-items: center; /* 중앙 정렬 */
   z-index: 1;
 `;
 
