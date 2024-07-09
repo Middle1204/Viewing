@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import backgroundImage from '../../assets/Background.jpg';
+import backgroundImage from '../../assets/Background.png';
 
 export const MainAfterContainer = styled.div`
   display: flex;
@@ -30,15 +30,16 @@ export const Overlay = styled.div`
   left: 0;
   width: 100%;
   height: 100%;
-  background: rgba(0, 0, 0, 0.5);
+  background: rgba(0, 0, 0, 0.2);
   z-index: -1;
 `;
 
 export const IconContainer = styled.div`
   display: flex;
   flex-direction: column;
-  align-items: center; /* 중앙 정렬 */
+  align-items: left;
   z-index: 1;
+  margin-bottom: 100px;
 `;
 
 export const IconText = styled.div`
@@ -46,7 +47,9 @@ export const IconText = styled.div`
   font-size: 18px;
   color: white;
   display: flex;
-  align-items: center;
+  font-size: 28px;
+  font-weight: 900;
+  margin-bottom: 50px;
 `;
 
 export const TreeIcon = styled.img`

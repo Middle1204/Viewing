@@ -16,9 +16,9 @@ const MainAfter = () => {
       <Overlay />
       <IconContainer>
         <TreeIcon src={treeIcon} alt="tree icon" />
-        <IconText>{treesPlanted} 그루</IconText>
+        <IconText>지금까지 심은 나무 : <br></br> {treesPlanted} 그루</IconText>
         <EarthIcon src={earthIcon} alt="earth icon" />
-        <IconText>{earthSavedTime}S</IconText>
+        <IconText>지금까지 늘어난 지구의 수명 : <br></br> {earthSavedTime}S</IconText>
       </IconContainer>
     </MainAfterContainer>
   );
